@@ -1,0 +1,28 @@
+body {
+  text-align: center;
+}
+
+.gamesquare {
+  display: inline-block;
+  margin: 10px;
+  overflow: auto;
+  width: 100px;
+  height: 100px;
+  transition: all 1s;
+  font-size: 3em;
+  line-height: 2em;
+  color: rgba(0, 0, 0, .8);
+  font-weight: 900;
+}
+
+.unplayed {
+  background: rgba(0, 0, 0, .7);
+}
+
+.playerX {
+  background: salmon;
+}
+
+.playerO {
+  background: lavender;
+}
