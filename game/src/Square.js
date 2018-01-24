@@ -9,20 +9,17 @@ class Square extends Component {
     }
   }
   changeSquare = () => {
-    // Change square class locally
-    let currentPlayer = this.props.currentPlayer;
-
-    if (this.state.color !== 'gamesquare unplayed') {
-      console.log('This space has been played');
+    if (this.state.color !== 'gamesquare unplayed' || this.props.winner) {
+      console.log('You cannot play this space');
     } 
     else {
       this.setState({
-        value: currentPlayer,
-        color: 'gamesquare player' + currentPlayer
+        value: this.props.currentPlayer,
+        color: 'gamesquare player' + this.props.currentPlayer
       })
-    // Run code in main App component to keep track of squares played
+    // Run code in main App component to track squares, then check for win
       this.props.squarePlayed({
-        player: currentPlayer,
+        player: this.props.currentPlayer,
         square: this.props.id
       });
     }

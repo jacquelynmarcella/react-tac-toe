@@ -6,19 +6,19 @@ class GameBoard extends Component {
       return (
         <div>
           <div className="row">
-            <Square id="1" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} />
-            <Square id="2" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} />
-            <Square id="3" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} />
+            <Square id="1" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} winner={this.props.winner} />
+            <Square id="2" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} winner={this.props.winner} />
+            <Square id="3" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} winner={this.props.winner} />
           </div>
           <div className="row">
-            <Square id="4" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} />
-            <Square id="5" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} />
-            <Square id="6" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} />
+            <Square id="4" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} winner={this.props.winner} />
+            <Square id="5" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} winner={this.props.winner} />
+            <Square id="6" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} winner={this.props.winner} />
           </div>
           <div className="row">
-            <Square id="7" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} />
-            <Square id="8" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} />
-            <Square id="9" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} />
+            <Square id="7" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} winner={this.props.winner} />
+            <Square id="8" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} winner={this.props.winner} />
+            <Square id="9" squarePlayed={this.props.squarePlayed} currentPlayer={this.props.currentPlayer} winner={this.props.winner} />
           </div>
         </div>
       )

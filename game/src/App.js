@@ -12,7 +12,6 @@ class App extends Component {
       winner: false
     }
   }
-
   squarePlayed = (data) => {
     let squares = this.state.squares;
     let squareId = parseInt(data.square - 1);
@@ -22,17 +21,17 @@ class App extends Component {
 
   checkWin = (player, squares) => {
     if ((squares[0] === player && squares[1] === player && squares[2] === player) || 
-        (squares[3] === player && squares[4] === player && squares[5] === player) ||
-        (squares[6] === player && squares[7] === player && squares[8] === player) ||
-        (squares[0] === player && squares[3] === player && squares[6] === player) ||
-        (squares[1] === player && squares[4] === player && squares[7] === player) ||
-        (squares[2] === player && squares[5] === player && squares[8] === player) ||
-        (squares[0] === player && squares[4] === player && squares[8] === player) ||
-        (squares[2] === player && squares[4] === player && squares[6] === player)) {
-          this.setState({
-            status: 'Player ' + player + ' wins!',
-            winner: true
-          });
+      (squares[3] === player && squares[4] === player && squares[5] === player) ||
+      (squares[6] === player && squares[7] === player && squares[8] === player) ||
+      (squares[0] === player && squares[3] === player && squares[6] === player) ||
+      (squares[1] === player && squares[4] === player && squares[7] === player) ||
+      (squares[2] === player && squares[5] === player && squares[8] === player) ||
+      (squares[0] === player && squares[4] === player && squares[8] === player) ||
+      (squares[2] === player && squares[4] === player && squares[6] === player)) {
+        this.setState({
+          status: 'Player ' + player + ' wins!',
+          winner: true
+        });
     }
     else if (!squares.includes(0)) {
       this.setState({
@@ -62,27 +61,15 @@ class App extends Component {
   }
 
   render() {
-    if(this.state.winner){
-      return (
+    return (
       <div>
         <h1>TIC TAC TOE</h1>
         <div className="gameBoard">
           <p>{this.state.status}</p>
+           <GameBoard squarePlayed={this.squarePlayed} currentPlayer={this.state.player} winner={this.state.winner} />
         </div>
       </div>
-    );        
-    }
-    else {
-      return (
-        <div>
-          <h1>TIC TAC TOE</h1>
-          <div className="gameBoard">
-            <p>{this.state.status}</p>
-            <GameBoard squarePlayed={this.squarePlayed} currentPlayer={this.state.player} />
-        </div>
-      </div>
-      );
-    }
+    );
   }
 }
 
